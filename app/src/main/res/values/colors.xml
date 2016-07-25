@@ -11,6 +11,8 @@
     <color name="color4">#40acff</color>
     <color name="color5">#c640ff</color>
     <color name="color6">#d2ff40</color>
+    <color name="color7">#9e9f9b</color>
+    <color name="color8">#ffa640</color>
 
 
     <color name="color10">#beb5b5</color>
@@ -19,4 +21,6 @@
     <color name="color13">#5b0348</color>
     <color name="color14">#511546</color>
     <color name="color15">#ed6606</color>
+    <color name="color16">#f233cf</color>
+    <color name="color17">#06edce</color>
 </resources>
