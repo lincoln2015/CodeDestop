@@ -28,6 +28,14 @@
             >
         </activity>
 
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="ShowPicActivity"
+            android:launchMode="singleTop"
+            android:name=".Activity.ShowPicActivity"
+            >
+        </activity>
+
     </application>
 
 </manifest>
