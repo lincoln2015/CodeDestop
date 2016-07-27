@@ -10,10 +10,19 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/textView" />
+
         <FrameLayout
             android:layout_gravity="center_horizontal"
-            android:layout_width="320dp"
-            android:layout_height="320dp">
+            android:layout_width="460dp"
+            android:layout_height="272dp">
             <SurfaceView
                 android:layout_marginBottom="40dp"
                 android:id="@+id/surface1"
@@ -63,6 +72,8 @@
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
+
+
 
 
     </LinearLayout>
