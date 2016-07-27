@@ -6,12 +6,26 @@
 
     tools:context=".Activity.DestopActivity">
 
-   <open.codedestop.Layout.DestopPagesLayout
-       android:id="@+id/mylayout"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+        <open.codedestop.Layout.DestopPagesLayout
+            android:id="@+id/mylayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+        </open.codedestop.Layout.DestopPagesLayout>
 
-   </open.codedestop.Layout.DestopPagesLayout>
+        <open.codedestop.Layout.PageIndictorLayout
+            android:id="@+id/pageControl"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="100dp"
+            android:gravity="center">
+
+        </open.codedestop.Layout.PageIndictorLayout>
+    </FrameLayout>
 </RelativeLayout>
