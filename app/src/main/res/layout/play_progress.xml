@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1f201e"
+
+    tools:context=".Activity.LessonActivity">
+    <FrameLayout
+        android:id="@+id/play_stop"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:visibility="gone"
+            android:src="@drawable/play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play" />
+        <ImageView
+            android:src="@drawable/stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stop" />
+
+    </FrameLayout>
+
+    <TextView
+       android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/play_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="time"
+        android:id="@+id/play_time" />
+
+    <SeekBar
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/play_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="time"
+        android:id="@+id/all_time" />
+
+
+</RelativeLayout>

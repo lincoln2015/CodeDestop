@@ -21,7 +21,7 @@
 
         <FrameLayout
             android:layout_gravity="center_horizontal"
-            android:layout_width="460dp"
+            android:layout_width="match_parent"
             android:layout_height="272dp">
             <SurfaceView
                 android:layout_marginBottom="40dp"
@@ -41,12 +41,11 @@
                 />
 
 
-            <SeekBar
-                android:layout_gravity="bottom"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/seekBar" />
-
+           <include
+               android:layout_gravity="bottom"
+               layout="@layout/play_progress"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
 
         </FrameLayout>
 
