@@ -29,16 +29,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <ProgressBar
-                android:id="@+id/leadProgressBarVideo"
-                style="@android:style/Widget.ProgressBar.Inverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <FrameLayout
                 android:gravity="center"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:max="100"
-                android:progress="20"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/leadProgressBarVideo"
+                    style="@android:style/Widget.ProgressBar.Inverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:max="100"
+                    android:progress="20"
+                    />
+                <ImageView
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:src="@drawable/play_btn_biger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/play_biger" />
+
+            </FrameLayout>
 
 
            <include
