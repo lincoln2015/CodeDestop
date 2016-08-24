@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body style="text-align: justify">
+	<h3>Net data transmission</h3>
+	<P>Android 客户端从服务器端获取网络数据，通过JSON解析将网络数据解析成客户端数据，Android客户端再将数据显示到界面上</p>
+
+	<P>完成布局后主线程中开启新线程，新线程用户向服务端发送获取数据服务请求并将获取到的数据做JSON 解析</p>
+	<img src="imgs/lesson_net/lesson_net_code_new_thread.jpg" style="width: 100%;" />
+
+
+	<P>网络请求线程定义</p>
+	<img src="imgs/lesson_net/lesson_net_thread_define_code_01.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_net/lesson_net_thread_define_code_02.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_net/lesson_net_thread_define_code_03.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_net/lesson_net_thread_define_code_04.jpg" style="width: 100%;" />
+
+	<P>网络请求线程通过JSON 解析完数据后，通过message，当然也可以通过broadcast 通知主线程进行界面更新</p>
+	<P>在这里更新的是一个list,list 的每一个item与Question对应</p>
+	<img src="imgs/lesson_net/lesson_net_handler_define_code.jpg" style="width: 100%;" />
+
+	<P>getView 中将数据设置到list item的相应的View当中</p>
+	<img src="imgs/lesson_net/lesson_net_listadpater_define_code_01.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_net/lesson_net_listadpater_define_code_02.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_net/lesson_net_listadpater_define_code_03.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_net/lesson_net_listadpater_define_code_04.jpg" style="width: 100%;" />
+
+
+</body>
+</html>
