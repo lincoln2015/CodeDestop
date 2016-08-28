@@ -183,6 +183,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
                         MODE_DEFAULT_PADDING, MODE_DEFAULT_PADDING);
                 pageLayout.addView(rotateImageView);
                 mRotateImageViewsArray[i * NUM_ONE_SCREEN + j] = rotateImageView;
+                rotateImageView.setOnClickListener(this);
             }
             mLayout.addView(pageLayout);
         }
