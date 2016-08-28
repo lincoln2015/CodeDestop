@@ -28,7 +28,7 @@ import open.codedestop.View.XCRoundRectImageView;
 /**
  ** Created by anxiagng.xiao (lincoln.shaw.wk@gmail.com) on 2016/8/28.
  */
-public class DestopActivity extends AppCompatActivity {
+public class DestopActivity extends AppCompatActivity implements View.OnClickListener{
     private String TAG = "DestopActivity";
     private PageIndictorLayout mPageControl;
     private static final int MODE_DEFAULT_PADDING = 5;
@@ -134,6 +134,22 @@ public class DestopActivity extends AppCompatActivity {
     LinearLayout.LayoutParams mLayoutPara = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT);
 
+    @Override
+    public void onClick(View v) {
+        for (int i = 0; i < LESSON_NUM_ALL && mRotateImageViewsArray[i] != null; i++){
+            if (v == mRotateImageViewsArray[i]){
+                Intent intent = new Intent(getApplicationContext(), LessonActivity.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putString("htmlFileName",LESSON_HTML_FILE[i]);
+                bundle.putString("videoFilePath",LESSON_VIDEO_FILE[i]);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+            }
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,6 +194,6 @@ public class DestopActivity extends AppCompatActivity {
 
         mPageControl = (PageIndictorLayout)findViewById(R.id.pageControl);
         mPageControl.bindScrollViewGroup(mLayout);
-        
+
     }
 }
