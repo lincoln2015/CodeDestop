@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Scroller;
 
 /**
- * Created by anxiang.xiao on 2016/8/25.
+ * * Created by anxiagng.xiao (lincoln.shaw.wk@gmail.com) on 2016/8/28.
  */
 public class DestopPagesLayout extends ViewGroup {
     private final  String TAG = "DestopPagesLayout";

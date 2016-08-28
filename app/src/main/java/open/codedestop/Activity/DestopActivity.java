@@ -7,7 +7,7 @@ import open.codedestop.Layout.DestopPagesLayout;
 import open.codedestop.R;
 
 /**
- * Created by Administrator on 2016/8/28.
+ ** Created by anxiagng.xiao (lincoln.shaw.wk@gmail.com) on 2016/8/28.
  */
 public class DestopActivity extends AppCompatActivity {
     private DestopPagesLayout mLayout;
