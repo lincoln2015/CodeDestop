@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.style.ImageSpan;
 import android.util.Log;
+import android.view.OrientationEventListener;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -50,6 +51,10 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
     public static final int LESSON_NUM_ALL = 10;
     public static final int NUM_ONE_SCREEN = 9;
     private int mScreenNums;
+
+    private  AlbumOrientationEventListener mAlbumOrientationEventListener;
+    private int mOrientation;
+
 
     private static final int[] LESSON_ICONS_HIGHTLIGHT = new int[LESSON_NUM_ALL];
     static {
@@ -199,5 +204,39 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         mPageControl = (PageIndictorLayout)findViewById(R.id.pageControl);
         mPageControl.bindScrollViewGroup(mLayout);
 
+        //for rotate the imageview
+        mAlbumOrientationEventListener = new AlbumOrientationEventListener(this,
+                SensorManager.SENSOR_DELAY_NORMAL);
+        if (mAlbumOrientationEventListener.canDetectOrientation()) {
+            mAlbumOrientationEventListener.enable();
+        } else {
+            Log.d(TAG, "Can't Detect Orientation");
+        }
+    }
+
+    private class AlbumOrientationEventListener extends OrientationEventListener {
+        public AlbumOrientationEventListener(Context context) {
+            super(context);
+        }
+
+        public AlbumOrientationEventListener(Context context, int rate) {
+            super(context, rate);
+        }
+
+        @Override
+        public void onOrientationChanged(int orientation) {
+            if (orientation == OrientationEventListener.ORIENTATION_UNKNOWN) {
+                return;
+            }
+            //4 directions
+            int newOrientation = ((orientation + 45) / 90 * 90) % 360 ;
+            Log.i(TAG, "newOrientation:"+newOrientation);
+            if (newOrientation != mOrientation) {
+                mOrientation = newOrientation; ///4directions 0°、90°、180°and 270°
+                for (int i = 0; i < LESSON_NUM_ALL; i++){
+                    mRotateImageViewsArray[i].setOrientation(mOrientation, true);
+                }
+            }
+        }
     }
 }
