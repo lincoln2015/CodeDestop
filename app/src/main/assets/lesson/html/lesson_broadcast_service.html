@@ -3,6 +3,16 @@
 </head>
 <body style="text-align: justify">
 	<h3>Service & BroadCast & AsyncTask</h3>
+	<P>Android Service & BroadCast & AsyncTask 基础运用定时器</p>
 
+	<P>Extends Service 实现CountService，startCount当中开启一个task线程处理耗时操作，
+		该新线程与主线程通过BroadCast通信，主线程接收到BroadCast后，更新UI</p>
+	<img src="imgs/lesson_service_broadcast/lesson_broad_service_service_defind_code_01.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_service_broadcast/lesson_broad_service_service_defind_code_02.jpg" style="width: 100%;" />
+
+	<P>主线程通过 bindService 开启CountService,该Service依旧跑在主线程中(通过startService方式会开启新线程)</p>
+	<img src="imgs/lesson_service_broadcast/lesson_broad_service_activity_code_01.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_service_broadcast/lesson_broad_service_activity_code_02.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_service_broadcast/lesson_broad_service_activity_code_03.jpg" style="width: 100%;" />
 </body>
 </html>
