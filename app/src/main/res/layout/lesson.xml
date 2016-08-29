@@ -1,108 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
+<open.codedestop.Layout.ScrollViewContainer
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scroll"
+    android:id="@+id/scrollContainer"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="视频"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:id="@+id/textView" />
+        android:orientation="vertical" >
 
-        <FrameLayout
-            android:layout_gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="272dp">
-            <SurfaceView
-                android:layout_marginBottom="40dp"
-                android:id="@+id/surface1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:id="@+id/textView" />
 
             <FrameLayout
-                android:gravity="center"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ProgressBar
-                    android:visibility="gone"
-                    android:id="@+id/leadProgressBarVideo"
-                    style="@android:style/Widget.ProgressBar.Inverse"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="272dp">
+                <SurfaceView
+                    android:layout_marginBottom="40dp"
+                    android:id="@+id/surface1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <FrameLayout
                     android:gravity="center"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:max="100"
-                    android:progress="20"
-                    />
-                <ImageView
-                    android:gravity="center"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:src="@drawable/play_btn_biger"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/play_biger" />
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/leadProgressBarVideo"
+                        style="@android:style/Widget.ProgressBar.Inverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:max="100"
+                        android:progress="20"
+                        />
+                    <ImageView
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:src="@drawable/play_btn_biger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/play_biger" />
+
+                </FrameLayout>
+
+
+                <include
+                    android:layout_gravity="bottom"
+                    layout="@layout/play_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </FrameLayout>
 
+            <ProgressBar
+                android:id="@+id/leadProgressBar"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:max="100"
+                android:layout_marginTop="150dp"
+                android:progress="20"
+                />
 
-           <include
-               android:layout_gravity="bottom"
-               layout="@layout/play_progress"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"/>
 
-        </FrameLayout>
+            <LinearLayout android:id="@+id/webviewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="40dp"
+                android:gravity="center_horizontal|center_vertical">
+                <WebView android:id="@+id/noteView" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
 
-        <ProgressBar
-            android:id="@+id/leadProgressBar"
-            style="@android:style/Widget.ProgressBar.Inverse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:max="100"
-            android:layout_marginTop="150dp"
-            android:progress="20"
-            />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"/>
 
-        <LinearLayout android:id="@+id/webviewContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="3dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:paddingBottom="40dp"
-            android:gravity="center_horizontal|center_vertical">
-            <WebView android:id="@+id/noteView" android:layout_width="fill_parent"
-                android:layout_height="wrap_content"/>
+
 
         </LinearLayout>
-
-
-
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</open.codedestop.Layout.ScrollViewContainer>
