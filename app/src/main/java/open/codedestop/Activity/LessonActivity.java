@@ -485,14 +485,14 @@ public class LessonActivity  extends AppCompatActivity implements View.OnClickLi
 
                             for (Object span : spans) {
                                 if (span instanceof ImageSpan) {
-                                    /*
+
                                     Intent intent = new Intent(c, ShowPicActivity.class);
                                     Bundle bundle = new Bundle();
 
                                     bundle.putString("picUrl",((ImageSpan) span).getSource());
                                     intent.putExtras(bundle);
 
-                                    startActivity(intent);*/
+                                    startActivity(intent);
                                 }
                             }
                         }

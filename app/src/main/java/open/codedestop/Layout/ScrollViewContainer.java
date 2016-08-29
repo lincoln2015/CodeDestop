@@ -10,7 +10,7 @@ import open.codedestop.Activity.LessonActivity;
 import open.codedestop.Util.LessonAction;
 
 /**
- * Created by Administrator on 2016/8/29.
+ ** Created by anxiagng.xiao (lincoln.shaw.wk@gmail.com) on 2016/8/29.
  */
 public class ScrollViewContainer extends LinearLayout {
     private String TAG = "ScrollViewContainer";
