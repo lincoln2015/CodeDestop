@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body style="text-align: justify">
+	<h3>Camera Demo</h3>
+	<P>通过SurfaceView实现一个支持preview，capture，video 功能的Camera demo</p>
+
+	<P>extends SurfaceView 并且implements SurfaceHolder.Callback 实现Callback的surfaceCreated、surfaceChanged、surfaceDestroyed ，
+		在 surfaceCreated 将callback 回来的holder 设置到camera实例中，然后startPreview 开始预览。</p>
+	<img src="imgs/lesson_camera/lesson_camera_camerapreview_define_01.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_camera/lesson_camera_camerapreview_define_02.jpg" style="width: 100%;" />
+
+
+	<P>CameraActivity实现</p>
+	<P>通过 Camera.open 获得Camera 实例，之后的preview,capture,video 功能都需要该实例</p>
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_01.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_02.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_03.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_04.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_05.jpg" style="width: 100%;" />
+	<P>onCreate 中new一个SurfaceView,当然这个SurfaceView也可以在xml 布局文件中直接定义</p>
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_06.jpg" style="width: 100%;" />
+	<img src="imgs/lesson_camera/lesson_camera_cameraactivity_define_07.jpg" style="width: 100%;" />
+
+
+</body>
+</html>
