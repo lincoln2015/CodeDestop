@@ -128,7 +128,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         LESSON_VIDEO_FILE[LESSON_PREFERENCE] = "http://18ducxy.com/vids/lesson_preference.mp4";
         LESSON_VIDEO_FILE[LESSON_BROADCAST_SERVICE] = "http://18ducxy.com/vids/lesson_broadcast_service.mp4";
         LESSON_VIDEO_FILE[LESSON_NET] = "http://18ducxy.com/vids/lesson_net.mp4";
-        LESSON_VIDEO_FILE[LESSON_NET] = "http://18ducxy.com/vids/lesson_camera.mp4";
+        LESSON_VIDEO_FILE[LESSON_CAMERA] = "http://18ducxy.com/vids/lesson_camera.mp4";
     };
 
     private DestopPagesLayout mLayout;
