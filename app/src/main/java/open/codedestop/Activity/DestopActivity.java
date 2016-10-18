@@ -45,10 +45,10 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
     public static final int LESSON_BROADCAST_SERVICE = 8;
     public static final int LESSON_NET = 9;
     public static final int LESSON_CAMERA = 10;
-    public static final int LESSON_11 = 11;
+    public static final int LESSON_CONTENTPROVIDER = 11;
 
 
-    public static final int LESSON_NUM_ALL = 11;
+    public static final int LESSON_NUM_ALL = 12;
     public static final int NUM_ONE_SCREEN = 9;
     private int mScreenNums;
 
@@ -69,7 +69,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         LESSON_ICONS_HIGHTLIGHT[LESSON_BROADCAST_SERVICE] = R.drawable.broadcast_service;
         LESSON_ICONS_HIGHTLIGHT[LESSON_NET] = R.drawable.net;
         LESSON_ICONS_HIGHTLIGHT[LESSON_CAMERA] = R.drawable.net;
-
+        LESSON_ICONS_HIGHTLIGHT[LESSON_CONTENTPROVIDER] = R.drawable.contentprovider;
     };
     private static final int[] LESSON_ICONS_NORMAL = new int[LESSON_NUM_ALL];
     static {
@@ -84,6 +84,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         LESSON_ICONS_NORMAL[LESSON_BROADCAST_SERVICE] = R.drawable.broadcast_service;
         LESSON_ICONS_NORMAL[LESSON_NET] = R.drawable.net;
         LESSON_ICONS_NORMAL[LESSON_CAMERA] = R.drawable.net;
+        LESSON_ICONS_HIGHTLIGHT[LESSON_CONTENTPROVIDER] = R.drawable.contentprovider;
     };
 
     private static final int[] LESSON_ICONS_TITLE_ID = new int[LESSON_NUM_ALL];
@@ -99,6 +100,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         LESSON_ICONS_TITLE_ID[LESSON_BROADCAST_SERVICE] = R.string.icon_title_service_broadcast;
         LESSON_ICONS_TITLE_ID[LESSON_NET] = R.string.icon_title_net;
         LESSON_ICONS_TITLE_ID[LESSON_CAMERA] = R.string.icon_title_camera;
+        LESSON_ICONS_TITLE_ID[LESSON_CONTENTPROVIDER] = R.string.icon_title_contentprovider;
     };
 
     private static final String[] LESSON_HTML_FILE = new String[LESSON_NUM_ALL];
@@ -114,6 +116,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         LESSON_HTML_FILE[LESSON_BROADCAST_SERVICE] = "lesson/html/lesson_broadcast_service.html";
         LESSON_HTML_FILE[LESSON_NET] = "lesson/html/lesson_net.html";
         LESSON_HTML_FILE[LESSON_CAMERA] = "lesson/html/lesson_camera.html";
+        LESSON_HTML_FILE[LESSON_CONTENTPROVIDER] = "lesson/html/lesson_contentprovider.html";
     };
 
     private static final String[] LESSON_VIDEO_FILE = new String[LESSON_NUM_ALL];
@@ -129,6 +132,7 @@ public class DestopActivity extends AppCompatActivity implements View.OnClickLis
         LESSON_VIDEO_FILE[LESSON_BROADCAST_SERVICE] = "http://18ducxy.com/vids/lesson_broadcast_service.mp4";
         LESSON_VIDEO_FILE[LESSON_NET] = "http://18ducxy.com/vids/lesson_net.mp4";
         LESSON_VIDEO_FILE[LESSON_CAMERA] = "http://18ducxy.com/vids/lesson_camera.mp4";
+        LESSON_VIDEO_FILE[LESSON_CONTENTPROVIDER] = "http://18ducxy.com/vids/lesson_contentprovider.mp4";
     };
 
     private DestopPagesLayout mLayout;

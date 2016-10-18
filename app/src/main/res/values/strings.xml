@@ -14,4 +14,5 @@
     <string name="icon_title_table_layout">Table Layout</string>
     <string name="icon_title_video_player">Video Player</string>
     <string name="icon_title_camera">Camera</string>
+    <string name="icon_title_contentprovider">ContentProvider</string>
 </resources>
