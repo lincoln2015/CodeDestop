@@ -29,6 +29,7 @@
                 android:id="@+id/textView" />
 
             <FrameLayout
+                android:id="@+id/videoframe"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="272dp">

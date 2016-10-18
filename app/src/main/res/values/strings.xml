@@ -16,4 +16,6 @@
     <string name="icon_title_camera">Camera</string>
     <string name="icon_title_contentprovider">ContentProvider</string>
     <string name="icon_title_sqlite">Sqlite</string>
+    <string name="icon_title_animation_guide">AnimationGuide</string>
+    <string name="icon_title_xml_paser">XmlPaser</string>
 </resources>
